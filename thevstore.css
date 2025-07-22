@@ -1,0 +1,243 @@
+<style>
+/* = Custom Scrollbar = */
+  /* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-background);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(#00000000);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 0px;
+    border: 0px none var(--color-on-background);
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+/* = End of Custom Scrollbar = */
+
+/* Customized Header */
+
+.header__logo-container {
+  transition: transform 0.3s ease;
+  transform: scale(var(--logo-scale, 1));
+}
+
+.page__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, #050505, #05050500);
+  transition: background-color 0.3s ease; /* keep it just in case */
+  overflow: visible; /* to show pseudo-element */
+} 
+
+.page__header::before {
+  transform-origin: top;
+  transform: scaleY(var(--header-scale, 1));
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  -webkit-backdrop-filter: saturate(100%) blur(0px);
+  backdrop-filter: saturate(100%) blur(0px);
+  border-bottom: solid 0px rgba(255, 255, 255, 0)e;
+  background: linear-gradient(to bottom, #050505, #05050500);
+  opacity: var(--header-opacity, 0); /* use CSS variable */
+  transition: opacity 0.1s ease; /* fast update so it looks dynamic */
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header__size--lg {
+  transition: padding 0.3s ease;
+padding-top: var(--header-padding-top, 28px);
+padding-bottom: var(--header-padding-bottom, 28px);
+}
+
+/* Customized Header */
+
+.drawer__background{
+-webkit-backdrop-filter: saturate(150%) blur(12px);
+backdrop-filter: saturate(150%) blur(12px);
+background: linear-gradient(to right, #050505c0, #000000);
+} 
+
+.modal__overlay{
+-webkit-backdrop-filter: saturate(150%) blur(12px);
+backdrop-filter: saturate(150%) blur(12px);
+background: linear-gradient(to right, #050505c0, #000000);
+} 
+
+/* .drawer__content{
+  box-shadow: 0 4px 50px #00000077;
+} */
+
+.product {
+margin-top: 30px;
+}
+
+.collection-template__header {
+margin-top: 100px;
+}
+
+.cart-container {
+  margin-top: 100px; /* pushes only the cart section down */
+}
+
+.container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 4000px;
+}
+
+.modal__content {
+  max-width: 550px;
+}
+
+/* Normal state — Primary Button button.button--primary.button--large.button--expand */
+.button.button--primary {
+    color: #ffffff !important;
+    background: #ffffff11!important;
+    border-color: #ffffff00 !important;
+    opacity: 1 !important;
+    border-radius: 0px;
+    -webkit-backdrop-filter: saturate(150%) blur(50px);
+    backdrop-filter: saturate(150%) blur(50px);
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%);
+    transition: clip-path, color, background-color, 0.3s ease;
+}
+
+.button.button--primary .button_icon {
+    color: #000000 !important;
+    fill: #000000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Hover state — Primary Button */
+.button.button--primary:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-backdrop-filter: saturate(150%) blur(50px);
+    backdrop-filter: saturate(150%) blur(50px);
+    border-color: #00000000 !important; /* keep border white */
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    0 100%);
+}
+
+/* Normal state — Secondary Button */
+.button.button--outline {
+    color: #ffffff !important;
+    background: #ffffff11!important;
+    border-color: #ffffff00 !important;
+    opacity: 1 !important;
+    border-radius: 0px;
+    -webkit-backdrop-filter: saturate(150%) blur(50px);
+    backdrop-filter: saturate(150%) blur(50px);
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%);
+    transition: clip-path, color, background-color, 0.3s ease;
+}
+
+.button.button--outline .button_icon {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Hover state — Secondary Button */
+.button.button--outline:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #00000000 !important; /* keep border white */
+    -webkit-backdrop-filter: saturate(150%) blur(50px);
+    backdrop-filter: saturate(150%) blur(50px);
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    0 100%);
+}
+
+.button.button--outline:hover .button_icon {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+
+
+button button--outline button--small
+
+.product-info__description {
+  font-size: 0.80rem;
+}
+
+.drawer__content {
+  position: fixed; /* or absolute, depending on what you want */
+  z-index: 9999; /* BIG number so it's on top of header */
+}
+
+.section-header__heading{
+    text-align: start;
+}
+
+@media (max-width: 640px) {
+    .section-header__heading {
+        text-align: center;
+    }
+}
+
+.image.image--background-color{
+background: 0;
+}
+
+.gallery__image-container.gallery__image-container--background-color{
+background: 0;
+}
+
+.collections-list__item-image-wrapper.collections-list__item-image-wrapper--ratio-1-1{
+background: 0;
+}
+
+.collections-list__item-title{
+text-align: center;
+}
+
+.mobile-menu{
+  background: transparent
+}
+
+.drawer__content--small{
+    background: linear-gradient(to right, #050505, #05050500);
+}
+
+</style>
