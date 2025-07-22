@@ -1,4 +1,3 @@
-<script>
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.page__header');
     const scrollY = window.scrollY;
@@ -37,4 +36,3 @@ window.addEventListener('scroll', function() {
     document.documentElement.style.setProperty('--header-padding-bottom', `${paddingBottom}px`);
 
 });
-</script>

@@ -1,4 +1,3 @@
-<style>
 /* = Custom Scrollbar = */
   /* Firefox */
 * {
@@ -239,5 +238,3 @@ text-align: center;
 .drawer__content--small{
     background: linear-gradient(to right, #050505, #05050500);
 }
-
-</style>
