@@ -1,5 +1,5 @@
 # TheVInc (Codename Store.TheV): 
-Welcome to the official GitHub repository of TheVInc. Here won't be anything *that* exciting to look at other than the source files we use to customize our [Fourthwall](https://store.thev.to) Page. - Consider this as our in-house extension for Fourthwall.
+Welcome to the official GitHub repository of TheVInc. Here won't be anything *that* exciting to look at other than the source files we use to customize our [Fourthwall](https://shop.thev.to) Page. - Consider this as our in-house extension for Fourthwall.
 
 These Files are:
 ### Cascaded Style Sheet (thevstore.css)
