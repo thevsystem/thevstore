@@ -1,14 +1,10 @@
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     const header = document.querySelector('.page__header');
     const scrollY = window.scrollY;
-    const threshold = 200;
 
-    if (scrollY >= threshold) {
-        header.classList.add('scrolled-past-threshold');
-    } else {
-        header.classList.remove('scrolled-past-threshold');
-    }
-});
+    const maxScroll = 200;
+    const shrinkStart = 80;
+
     // Opacity
     const opacity = Math.min(scrollY / maxScroll, 1);
     header.style.setProperty('--header-opacity', opacity);
