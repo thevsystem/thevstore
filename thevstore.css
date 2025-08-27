@@ -49,11 +49,11 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  -webkit-backdrop-filter: saturate(150%) blur(10px);
-  backdrop-filter: saturate(150%) blur(1px);
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2); /* opaque border */
-  background: rgba(0, 0, 0, 0.0); /* solid dark background */
-  opacity: var(--header-opacity, 1); /* use CSS variable */
+    -webkit-backdrop-filter: saturate(100%) blur(0px);
+  backdrop-filter: saturate(100%) blur(0px);
+  border-bottom: solid 0px rgba(255, 255, 255, 0)e;
+  background: linear-gradient(to bottom, #050505, #05050500);
+  opacity: var(--header-opacity, 0); /* use CSS variable */
   transition: opacity 0.1s ease; /* fast update so it looks dynamic */
   pointer-events: none;
   z-index: -1;
